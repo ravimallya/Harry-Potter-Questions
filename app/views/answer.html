@@ -1,0 +1,26 @@
+﻿<md-content layout="row" layout-align="space-around" layout-padding="layout-padding" class="login-form">
+    <md-card flex="flex" flex-gt-sm="50" flex-gt-md="33">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2><span>Welcome {{UserName}}! </span></h2>
+            </div>
+        </md-toolbar>
+        <md-card-content>
+            <div ng-repeat="q in questions" style="margin-bottom:20px;">
+                <p><strong>{{q.question}}</strong></p>
+                <md-radio-group class="md-primary radio-answer" ng-model="q.selected" ng-change="nextQuestion()">
+                    <md-radio-button aria-labelledby="{{q.choice1}}" ng-class="setClass(q.correct, '1')" ng-disabled="true" value="1">{{q.choice1}}</md-radio-button>
+                    <md-radio-button aria-labelledby="{{q.choice2}}" ng-class="setClass(q.correct, '2')" ng-disabled="true" value="2">{{q.choice2}}</md-radio-button>
+                    <md-radio-button aria-labelledby="{{q.choice3}}" ng-class="setClass(q.correct, '3')" ng-disabled="true" value="3">{{q.choice3}}</md-radio-button>
+                    <md-radio-button aria-labelledby="{{q.choice4}}" ng-class="setClass(q.correct, '4')" ng-disabled="true" value="4">{{q.choice4}}</md-radio-button>
+                    <md-radio-button aria-labelledby="{{q.choice5}}" ng-class="setClass(q.correct, '5')" ng-disabled="true" value="5">{{q.choice5}}</md-radio-button>
+                </md-radio-group>
+                <!--<md-button type="submit" wz-next class="md-primary md-raised" ng-disabled="!q.selected" ng-if="!$last">Next</md-button>
+        <md-button type="submit" wz-next class="md-accent md-raised" ng-disabled="!q.selected" ng-if="$last">Finish</md-button>-->
+            </div>
+            <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button class="md-raised md-primary" type="button" ng-click="startOver()"> Start Again </md-button>
+            </div>
+        </md-card-content>
+    </md-card>
+</md-content>

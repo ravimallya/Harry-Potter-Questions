@@ -1,0 +1,25 @@
+﻿<md-content layout="row" layout-align="space-around" layout-padding="layout-padding" class="login-form">
+    <md-card flex="flex" flex-gt-sm="50" flex-gt-md="33">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2><span>Welcome {{UserName}}! </span></h2>
+            </div>
+        </md-toolbar>
+        <md-card-content>
+            <div id="container" style="min-height:300px;"></div>
+            <hr />
+            <div>
+                Total Questions: {{quests}}<br />
+                Total Correct Answers: {{correct}}<br />
+                Total Wrong Answers: {{wrong}}
+                <!--<hr />
+                correct Percentage :{{cPerc}}
+                Wrong Percentage :{{wPerc}}-->
+            </div>
+            <hr />
+            <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+                <md-button class="md-raised md-primary" type="button" ng-click="showAnswer()"> View Answers </md-button>
+            </div>
+        </md-card-content>
+    </md-card>
+</md-content>

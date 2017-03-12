@@ -1,0 +1,25 @@
+﻿
+.radio-answer .md-checked .md-off {
+    border-color: #ff4500 !important;
+}
+.radio-green .md-on, .md-checked.button-green .md-on{
+    background: rgb(76, 175, 80) !important;
+}
+.radio-answer .md-on {
+    background: #ff4500  !important;
+}
+.radio-green .md-checked .md-off, .md-checked.button-green .md-off {
+    border-color: rgb(76, 175, 80) !important;
+}
+.radio-answer .md-checked .md-label {
+color:  #ff4500  !important;
+}
+.radio-answer .button-green .md-label {
+color:rgb(76, 175, 80) !important;
+}
+.radio-answer .md-checked.button-green .md-label {
+color:rgb(76, 175, 80) !important;
+}
+.button-green .md-off {
+border-color:rgb(76, 175, 80) !important;
+}
